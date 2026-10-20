@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conga's Latin Cafe — Café Cubano en Tampa, FL | Desayunos, Sándwich Cubano y Catering</title>
+<meta name="description" content="Conga's Latin Cafe en 4511 Gunn Hwy, Tampa. Desayunos cubanos, tostadas, café con leche, sándwich cubano y platos latinos desde 2010. Catering disponible.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@600;700&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --crema:#FFF6E0; --crema2:#FFEDBE; --rojo:#C1272D; --rojo-osc:#93191F;
+  --verde:#1E7A46; --verde-osc:#0F5132; --dorado:#E9A319; --dorado2:#F6C445;
+  --cafe:#4A2C1A; --marron:#2B1A12; --madera:#D9B98A; --linea:#EAD9AE;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito',Verdana,sans-serif;background:#F3E5C3;color:var(--marron);font-size:16px;line-height:1.5}
+.wrap{max-width:640px;margin:0 auto;background:var(--crema);box-shadow:0 0 34px rgba(75,44,26,.25);min-height:100vh}
+img{display:block;max-width:100%}
+a{text-decoration:none}
+
+/* cinta superior */
+.ribbon{background:var(--cafe);color:#FFE9B8;text-align:center;font-size:12.5px;font-weight:800;letter-spacing:.6px;padding:7px 10px}
+.ribbon b{color:var(--dorado2)}
+
+/* encabezado */
+header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,#FFF9EA,#FFF1CF);border-bottom:3px solid var(--dorado);padding:10px 14px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:10px}
+.logo{display:flex;align-items:center;gap:9px;flex:0 0 auto}
+.logo svg{flex:0 0 auto}
+.wordmark{line-height:.95;white-space:nowrap}
+.wordmark .wm1{font-family:'Bebas Neue',Impact,sans-serif;font-size:30px;letter-spacing:1.5px;color:var(--dorado);-webkit-text-stroke:1.2px var(--verde-osc);text-shadow:2px 2px 0 var(--verde)}
+.wordmark .wm2{font-size:10.5px;font-weight:900;letter-spacing:2.4px;color:var(--verde-osc)}
+.lang{justify-self:end;width:max-content;display:flex;background:#fff;border:2px solid var(--verde);border-radius:999px;overflow:hidden;flex:0 0 auto}
+.lang button{flex:0 0 auto;border:0;background:transparent;padding:7px 13px;font-weight:900;font-size:13px;color:var(--verde-osc);cursor:pointer;font-family:inherit}
+.lang button.on{background:var(--verde);color:#fff}
+
+/* héroe */
+.hero{position:relative}
+.hero .foto{width:100%;height:340px;object-fit:cover;object-position:center 76%}
+.hero .sombra{position:absolute;inset:0;background:linear-gradient(180deg,rgba(43,26,18,.02) 26%,rgba(15,81,50,.92) 80%)}
+.hero .cartel{position:absolute;left:0;right:0;bottom:0;padding:16px 18px 18px;color:#fff}
+.hero .script{font-family:'Caveat',cursive;font-size:27px;color:var(--dorado2);line-height:1;text-shadow:1px 2px 5px rgba(0,0,0,.7)}
+.hero h1{font-family:'Bebas Neue',Impact,sans-serif;font-size:43px;line-height:.98;letter-spacing:1px;margin:3px 0 7px;text-shadow:2px 3px 0 rgba(0,0,0,.35)}
+.hero h1 em{font-style:normal;color:var(--dorado2)}
+.hero p{font-size:15px;font-weight:700;max-width:94%;text-shadow:1px 1px 2px rgba(0,0,0,.5)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:11px 0 13px}
+.chip{background:rgba(255,246,224,.96);color:var(--cafe);font-size:12.5px;font-weight:900;border-radius:999px;padding:5px 12px}
+.chip .st{color:var(--dorado)}
+.ctas{display:flex;gap:8px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:12px 18px;font-weight:900;font-size:15px;color:#fff;box-shadow:0 3px 8px rgba(0,0,0,.28)}
+.btn.rojo{background:var(--rojo)} .btn.verde{background:#22a35a}
+.btn.borde{background:rgba(255,255,255,.14);border:2px solid #fff;box-shadow:none}
+
+/* ritmo / datos */
+.beats{display:flex;background:var(--cafe);color:#FFE9B8}
+.beat{flex:1;text-align:center;padding:14px 6px 12px}
+.beat + .beat{border-left:1px dashed rgba(246,196,69,.45)}
+.beat .n{font-family:'Bebas Neue',Impact,sans-serif;font-size:24px;color:#fff;letter-spacing:.5px;line-height:1}
+.beat .t{font-size:11.5px;font-weight:800;letter-spacing:.4px;margin-top:3px}
+.drumdiv{display:flex;justify-content:center;background:var(--cafe);padding:0 0 10px}
+
+/* secciones */
+section{padding:26px 18px 6px}
+.kicker{font-family:'Caveat',cursive;font-size:24px;color:var(--rojo);line-height:1}
+h2{font-family:'Bebas Neue',Impact,sans-serif;font-size:32px;letter-spacing:1px;color:var(--verde-osc);line-height:1.02;margin:2px 0 6px}
+h2 .rj{color:var(--rojo)}
+.sub{font-size:14.5px;color:#6d5136;font-weight:700;margin-bottom:14px}
+
+/* favoritos */
+.fav{display:flex;gap:13px;background:#fff;border:1.5px solid var(--linea);border-radius:16px;overflow:hidden;margin-bottom:13px;box-shadow:0 2px 7px rgba(75,44,26,.08)}
+.fav img{width:118px;height:118px;object-fit:cover;flex:0 0 auto}
+.fav .tx{padding:11px 13px 11px 0;min-width:0}
+.fav .tag{font-size:10.5px;font-weight:900;letter-spacing:1.2px;color:var(--dorado);text-transform:uppercase}
+.fav h3{font-size:17.5px;font-weight:900;color:var(--marron);line-height:1.15;margin:1px 0 3px}
+.fav p{font-size:13.5px;color:#6d5136;line-height:1.4}
+.fav .pr{display:inline-block;margin-top:6px;background:var(--verde);color:#fff;font-weight:900;font-size:14.5px;border-radius:8px;padding:3px 11px}
+.favchips{display:flex;gap:7px;flex-wrap:wrap;margin:2px 0 6px}
+.favchips span{background:var(--crema2);border:1.5px dashed var(--dorado);color:var(--cafe);font-size:12.5px;font-weight:800;border-radius:999px;padding:4px 11px}
+
+/* menú estilo carta impresa */
+.menu{background:
+  repeating-linear-gradient(45deg,rgba(233,163,25,.07) 0 14px,transparent 14px 28px),
+  repeating-linear-gradient(-45deg,rgba(233,163,25,.07) 0 14px,transparent 14px 28px),
+  #FFF9E9;
+  border:2.5px solid var(--dorado);border-radius:18px;padding:18px 16px 12px;box-shadow:0 4px 14px rgba(75,44,26,.12)}
+.menu .mhead{display:flex;gap:12px;align-items:center;margin-bottom:6px}
+.menu .mhead img{width:74px;height:74px;object-fit:cover;border-radius:12px;border:2px solid var(--dorado)}
+.menu .mhead .mt{font-family:'Caveat',cursive;font-size:23px;color:var(--rojo);line-height:1.05}
+.menu h3{font-family:'Caveat',cursive;font-size:27px;color:var(--rojo);margin:15px 0 5px;border-bottom:2px dashed var(--dorado);padding-bottom:2px}
+.mi{display:flex;align-items:baseline;gap:7px;padding:4.5px 0;font-size:14.5px}
+.mi .nm{font-weight:800}
+.mi .ds{font-weight:600;color:#7a5c3a;font-size:12.8px}
+.mi .dots{flex:1;border-bottom:2px dotted #CBB27F;transform:translateY(-3px)}
+.mi .pr{font-weight:900;color:var(--verde-osc);white-space:nowrap}
+.nota{font-size:12px;color:#8a6d45;margin-top:13px;line-height:1.45}
+
+/* catering */
+.catering{margin:24px 0 0;background:linear-gradient(135deg,var(--verde) 0%,var(--verde-osc) 100%);
+  color:#fff;padding:26px 20px 28px;text-align:center}
+.catering .script{font-family:'Caveat',cursive;font-size:25px;color:var(--dorado2)}
+.catering h2{color:#fff}
+.catering p{font-weight:700;font-size:14.5px;max-width:92%;margin:0 auto 15px}
+.catering .btn{background:#fff;color:var(--verde-osc);box-shadow:0 3px 9px rgba(0,0,0,.25)}
+
+/* galería */
+.gal{display:flex;flex-wrap:wrap;gap:9px}
+.gal img{width:calc(50% - 5px);height:158px;object-fit:cover;border-radius:14px;border:2px solid #fff;box-shadow:0 2px 8px rgba(75,44,26,.18)}
+.gal .wide{width:100%;height:190px}
+
+/* QR */
+.qrs{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.qrcard{background:#fff;border:1.5px solid var(--linea);border-radius:16px;padding:15px 12px;text-align:center;box-shadow:0 2px 7px rgba(75,44,26,.08)}
+.qrcard img{width:128px;height:128px;margin:0 auto 8px}
+.qrcard h3{font-size:15.5px;font-weight:900}
+.qrcard p{font-size:12.5px;color:#6d5136;font-weight:700;line-height:1.4}
+.qrcard .stars{color:var(--dorado);font-size:17px;letter-spacing:2px}
+
+/* info */
+.info{background:#fff;border:1.5px solid var(--linea);border-radius:16px;padding:16px;box-shadow:0 2px 7px rgba(75,44,26,.08)}
+.info table{width:100%;border-collapse:collapse;font-size:14.5px}
+.info td{padding:5.5px 2px;border-bottom:1px dashed var(--linea);font-weight:700}
+.info td:last-child{text-align:right;font-weight:900;color:var(--verde-osc)}
+.info tr:last-child td{border-bottom:0}
+.info .dir{font-size:15px;font-weight:800;margin-bottom:9px}
+.info .dir small{display:block;color:#6d5136;font-weight:700}
+
+footer{background:var(--marron);color:#F3E2B8;text-align:center;padding:24px 18px 30px;margin-top:26px}
+footer .f1{font-family:'Bebas Neue',Impact,sans-serif;font-size:25px;letter-spacing:1.5px;color:var(--dorado2)}
+footer p{font-size:13px;font-weight:700;margin-top:4px}
+footer a{color:#fff;font-weight:900}
+.wa-float{position:fixed;right:16px;bottom:16px;width:56px;height:56px;border-radius:50%;background:#22a35a;display:flex;align-items:center;justify-content:center;box-shadow:0 5px 16px rgba(0,0,0,.35);z-index:60}
+@media (max-width:380px){.hero h1{font-size:36px}.fav img{width:100px;height:110px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="ribbon" data-es="DESAYUNOS Y ALMUERZOS · <b>CATERING DISPONIBLE</b> · DESDE 2010" data-en="BREAKFAST &amp; LUNCH · <b>CATERING AVAILABLE</b> · SINCE 2010">DESAYUNOS Y ALMUERZOS · <b>CATERING DISPONIBLE</b> · DESDE 2010</div>
+
+<header>
+  <div class="logo">
+    <svg width="42" height="42" viewBox="0 0 48 48" aria-hidden="true">
+      <ellipse cx="15" cy="9" rx="8.5" ry="3.4" fill="#F3E3C2" stroke="#8A5A2B" stroke-width="1.6"/>
+      <path d="M6.5 9 L9.5 38 Q15 41.5 20.5 38 L23.5 9 Q15 12.4 6.5 9Z" fill="#C1272D" stroke="#8A5A2B" stroke-width="1.6"/>
+      <path d="M8.6 20 Q15 23 21.4 20" fill="none" stroke="#F6C445" stroke-width="2.2"/>
+      <ellipse cx="33" cy="9" rx="8.5" ry="3.4" fill="#F3E3C2" stroke="#8A5A2B" stroke-width="1.6"/>
+      <path d="M24.5 9 L27.5 38 Q33 41.5 38.5 38 L41.5 9 Q33 12.4 24.5 9Z" fill="#C1272D" stroke="#8A5A2B" stroke-width="1.6"/>
+      <path d="M26.6 20 Q33 23 39.4 20" fill="none" stroke="#F6C445" stroke-width="2.2"/>
+    </svg>
+    <div class="wordmark">
+      <div class="wm1">CONGA'S</div>
+      <div class="wm2">LATIN CAFE · TAMPA</div>
+    </div>
+  </div>
+  <div class="lang">
+    <button id="bES" class="on" onclick="setLang('es')">ES</button>
+    <button id="bEN" onclick="setLang('en')">EN</button>
+  </div>
+</header>
+
+<div class="hero">
+  <img class="foto" src="imgs/frente.jpg" alt="Fachada de Conga's Latin Cafe en Gunn Hwy, Tampa">
+  <div class="sombra"></div>
+  <div class="cartel">
+    <div class="script" data-es="¡Bienvenidos a Conga's!" data-en="Welcome to Conga's!">¡Bienvenidos a Conga's!</div>
+    <h1 data-es="EL SABOR DE CUBA, <em>AL RITMO DE LA CONGA</em>" data-en="THE TASTE OF CUBA, <em>TO THE BEAT OF THE CONGA</em>">EL SABOR DE CUBA, <em>AL RITMO DE LA CONGA</em></h1>
+    <p data-es="Tostadas, café con leche y el sándwich cubano de verdad — desayunos y almuerzos latinos en Gunn Hwy desde 2010." data-en="Cuban toast, café con leche and a real Cuban sandwich — Latin breakfasts and lunches on Gunn Hwy since 2010.">Tostadas, café con leche y el sándwich cubano de verdad — desayunos y almuerzos latinos en Gunn Hwy desde 2010.</p>
+    <div class="chips">
+      <span class="chip"><span class="st">★</span> 4.7 · Google</span>
+      <span class="chip" data-es="Desde 2010" data-en="Since 2010">Desde 2010</span>
+      <span class="chip" data-es="Café con leche desde $1.80" data-en="Café con leche from $1.80">Café con leche desde $1.80</span>
+    </div>
+    <div class="ctas">
+      <a class="btn rojo" href="tel:+18139627775">📞 <span data-es="Llamar" data-en="Call">Llamar</span></a>
+      <a class="btn verde" href="https://wa.me/18139627775" target="_blank" rel="noopener">💬 WhatsApp</a>
+      <a class="btn borde" href="https://www.google.com/maps/search/?api=1&amp;query=Conga%27s+Latin+Cafe&amp;query_place_id=ChIJu_loiFTAwogR_sclBa9FKMM" target="_blank" rel="noopener">📍 <span data-es="Cómo llegar" data-en="Directions">Cómo llegar</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="beats">
+  <div class="beat"><div class="n">2010</div><div class="t" data-es="SIRVIENDO A TAMPA DESDE" data-en="SERVING TAMPA SINCE">SIRVIENDO A TAMPA DESDE</div></div>
+  <div class="beat"><div class="n">4.7★</div><div class="t" data-es="EN GOOGLE" data-en="ON GOOGLE">EN GOOGLE</div></div>
+  <div class="beat"><div class="n">$2.25</div><div class="t" data-es="LA TOSTADA CUBANA" data-en="THE CUBAN TOAST">LA TOSTADA CUBANA</div></div>
+</div>
+
+<section>
+  <div class="kicker" data-es="los que repiten y repiten" data-en="the ones they order again and again">los que repiten y repiten</div>
+  <h2 data-es="LOS FAVORITOS <span class='rj'>DE LA CASA</span>" data-en="HOUSE <span class='rj'>FAVORITES</span>">LOS FAVORITOS <span class="rj">DE LA CASA</span></h2>
+  <p class="sub" data-es="Los platillos que los clientes nombran una y otra vez en las reseñas." data-en="The dishes customers keep naming in the reviews.">Los platillos que los clientes nombran una y otra vez en las reseñas.</p>
+
+  <div class="fav">
+    <img src="imgs/lechon.jpg" alt="Cerdo asado">
+    <div class="tx">
+      <div class="tag" data-es="★ El favorito" data-en="★ The favorite">★ El favorito</div>
+      <h3 data-es="Sándwich Cubano Conga" data-en="Conga Cuban Sandwich">Sándwich Cubano Conga</h3>
+      <p data-es="El de la casa, prensado en pan cubano como manda la tradición de Tampa." data-en="Our signature, pressed on Cuban bread the Tampa way.">El de la casa, prensado en pan cubano como manda la tradición de Tampa.</p>
+      <span class="pr">$5.50</span>
+    </div>
+  </div>
+
+  <div class="fav">
+    <img src="imgs/especial.jpg" alt="Plato especial de la casa">
+    <div class="tx">
+      <div class="tag" data-es="Para empezar el día" data-en="To start the day">Para empezar el día</div>
+      <h3>Conga Special Breakfast</h3>
+      <p data-es="2 huevos, bacon, salchicha o jamón, tostada cubana y café con leche chico." data-en="2 eggs, bacon, sausage or ham, Cuban toast and a small café con leche.">2 huevos, bacon, salchicha o jamón, tostada cubana y café con leche chico.</p>
+      <span class="pr">$8.25</span>
+    </div>
+  </div>
+
+  <div class="fav">
+    <img src="imgs/pollo-asado.jpg" alt="Pollo asado con ensalada">
+    <div class="tx">
+      <div class="tag" data-es="Sabor casero" data-en="Homestyle flavor">Sabor casero</div>
+      <h3 data-es="Pollo Asado" data-en="Roast Chicken">Pollo Asado</h3>
+      <p data-es="El especial que los clientes fotografían: jugoso, dorado y con su ensalada fresca." data-en="The special customers keep photographing: juicy, golden and with fresh salad.">El especial que los clientes fotografían: jugoso, dorado y con su ensalada fresca.</p>
+      <span class="pr">$10.95</span>
+    </div>
+  </div>
+
+  <div class="favchips">
+    <span data-es="Sándwich de Palomilla" data-en="Palomilla Steak Sandwich">Sándwich de Palomilla</span>
+    <span>Picadillo</span>
+    <span data-es="Plátanos Maduros" data-en="Sweet Plantains">Plátanos Maduros</span>
+    <span data-es="Empanadas de Pollo" data-en="Chicken Empanadas">Empanadas de Pollo</span>
+    <span data-es="Sándwich de Cerdo" data-en="Pork Sandwich">Sándwich de Cerdo</span>
+  </div>
+</section>
+
+<section>
+  <div class="kicker" data-es="directo de nuestra carta" data-en="straight from our menu board">directo de nuestra carta</div>
+  <h2 data-es="EL MENÚ <span class='rj'>COMPLETO</span>" data-en="THE FULL <span class='rj'>MENU</span>">EL MENÚ <span class="rj">COMPLETO</span></h2>
+
+  <div class="menu">
+    <div class="mhead">
+      <img src="imgs/menu-original.jpg" alt="Menú impreso original de Conga's Latin Cafe">
+      <div class="mt" data-es="El menú impreso de siempre, con los precios de siempre." data-en="Our printed menu as always, with the prices as always.">El menú impreso de siempre, con los precios de siempre.</div>
+    </div>
+
+    <h3 data-es="Desayunos" data-en="Breakfast">Desayunos</h3>
+    <div class="mi"><span class="nm">Conga Special</span><span class="dots"></span><span class="pr">$8.25</span></div>
+    <div class="mi"><span class="ds" data-es="2 huevos, bacon, salchicha o jamón, tostada cubana y café con leche chico" data-en="2 eggs, bacon, sausage or ham, Cuban toast &amp; small café con leche">2 huevos, bacon, salchicha o jamón, tostada cubana y café con leche chico</span></div>
+    <div class="mi"><span class="nm">Conga's Deluxe Breakfast</span><span class="dots"></span><span class="pr">$11.95</span></div>
+    <div class="mi"><span class="ds" data-es="Bistec, 2 huevos, tator tots, tostada cubana y café con leche" data-en="Steak, 2 eggs, tater tots, Cuban toast &amp; café con leche">Bistec, 2 huevos, tator tots, tostada cubana y café con leche</span></div>
+    <div class="mi"><span class="nm" data-es="Tostada Cubana" data-en="Cuban Toast">Tostada Cubana</span><span class="dots"></span><span class="pr">$2.25</span></div>
+    <div class="mi"><span class="nm" data-es="Tostada de Queso" data-en="Cheese Toast">Tostada de Queso</span><span class="dots"></span><span class="pr">$3.25</span></div>
+    <div class="mi"><span class="nm" data-es="Sándwich de Huevo y Queso" data-en="Egg &amp; Cheese Sandwich">Sándwich de Huevo y Queso</span><span class="dots"></span><span class="pr">$6.50</span></div>
+    <div class="mi"><span class="nm" data-es="Sándwich de Bistec y Huevos" data-en="Steak &amp; Egg Sandwich">Sándwich de Bistec y Huevos</span><span class="dots"></span><span class="pr">$10.75</span></div>
+    <div class="mi"><span class="nm" data-es="Omelet de Jamón y Queso" data-en="Ham &amp; Cheese Omelet">Omelet de Jamón y Queso</span><span class="ds" data-es="(con tostada cubana)" data-en="(with Cuban toast)">(con tostada cubana)</span><span class="dots"></span><span class="pr">$8.95</span></div>
+    <div class="mi"><span class="nm">Pancakes</span><span class="ds" data-es="(orden de dos)" data-en="(order of two)">(orden de dos)</span><span class="dots"></span><span class="pr">$5.25</span></div>
+
+    <h3 data-es="Sándwiches" data-en="Sandwiches">Sándwiches</h3>
+    <div class="mi"><span class="nm" data-es="Conga Cubano" data-en="Conga Cuban">Conga Cubano</span><span class="dots"></span><span class="pr">$5.50</span></div>
+    <div class="mi"><span class="nm" data-es="Palomilla" data-en="Palomilla Steak">Palomilla</span><span class="ds" data-es="(empanizada $7.25)" data-en="(breaded $7.25)">(empanizada $7.25)</span><span class="dots"></span><span class="pr">$6.75</span></div>
+    <div class="mi"><span class="nm">Media Noche</span><span class="dots"></span><span class="pr">$5.75</span></div>
+    <div class="mi"><span class="nm" data-es="Philly Steak en Pan Cubano" data-en="Philly Steak on Cuban Bread">Philly Steak en Pan Cubano</span><span class="dots"></span><span class="pr">$6.50</span></div>
+    <div class="mi"><span class="nm" data-es="Pollo" data-en="Chicken">Pollo</span><span class="ds" data-es="(empanizado $6.75)" data-en="(breaded $6.75)">(empanizado $6.75)</span><span class="dots"></span><span class="pr">$6.25</span></div>
+    <div class="mi"><span class="nm" data-es="Cerdo" data-en="Pork">Cerdo</span><span class="dots"></span><span class="pr">$6.25</span></div>
+    <div class="mi"><span class="nm">Ropa Vieja</span><span class="dots"></span><span class="pr">$6.50</span></div>
+    <div class="mi"><span class="nm" data-es="Atún" data-en="Tuna">Atún</span><span class="dots"></span><span class="pr">$5.50</span></div>
+    <div class="mi"><span class="nm" data-es="Vegetariano" data-en="Veggie">Vegetariano</span><span class="dots"></span><span class="pr">$4.50</span></div>
+    <div class="mi"><span class="nm" data-es="Croquetas de Jamón con Jamón y Queso" data-en="Ham Croquettes with Ham &amp; Cheese">Croquetas de Jamón con Jamón y Queso</span><span class="dots"></span><span class="pr">$5.50</span></div>
+
+    <h3 data-es="Platos del Día" data-en="Daily Selections">Platos del Día</h3>
+    <div class="mi"><span class="nm" data-es="Bistec de Palomilla" data-en="Palomilla Steak">Bistec de Palomilla</span><span class="ds" data-es="(empanizado $9.50)" data-en="(breaded $9.50)">(empanizado $9.50)</span><span class="dots"></span><span class="pr">$8.95</span></div>
+    <div class="mi"><span class="nm" data-es="Milanesa de Bistec" data-en="Steak Milanesa">Milanesa de Bistec</span><span class="ds" data-es="(jamón, salsa de tomate y queso)" data-en="(ham, tomato sauce &amp; cheese)">(jamón, salsa de tomate y queso)</span><span class="dots"></span><span class="pr">$10.50</span></div>
+    <div class="mi"><span class="nm" data-es="Pechuga de Pollo" data-en="Chicken Breast">Pechuga de Pollo</span><span class="ds" data-es="(empanizada $8.75)" data-en="(breaded $8.75)">(empanizada $8.75)</span><span class="dots"></span><span class="pr">$8.25</span></div>
+    <div class="mi"><span class="nm" data-es="Milanesa de Pollo" data-en="Chicken Milanesa">Milanesa de Pollo</span><span class="dots"></span><span class="pr">$9.95</span></div>
+    <div class="mi"><span class="nm" data-es="Chuletas de Cerdo" data-en="Pork Chops">Chuletas de Cerdo</span><span class="ds">1–$8.25 / 2–$10.75</span><span class="dots"></span><span class="pr">$8.25</span></div>
+    <div class="mi"><span class="nm" data-es="Masitas de Cerdo" data-en="Pork Chunks">Masitas de Cerdo</span><span class="dots"></span><span class="pr">$8.75</span></div>
+    <div class="mi"><span class="nm">Ropa Vieja</span><span class="dots"></span><span class="pr">$10.95</span></div>
+    <div class="mi"><span class="nm">Bandeja Paisa Colombiana</span><span class="dots"></span><span class="pr">$10.95</span></div>
+    <div class="mi"><span class="nm" data-es="Camarones al Ajillo" data-en="Shrimp in Garlic Sauce">Camarones al Ajillo</span><span class="dots"></span><span class="pr">$10.95</span></div>
+
+    <h3 data-es="Bebidas" data-en="Drinks">Bebidas</h3>
+    <div class="mi"><span class="nm">Café con Leche</span><span class="ds" data-es="Ch $1.80 · Med $2.10 · Gde $2.60" data-en="Sm $1.80 · Md $2.10 · Lg $2.60">Ch $1.80 · Med $2.10 · Gde $2.60</span><span class="dots"></span><span class="pr">$1.80</span></div>
+    <div class="mi"><span class="nm">Cortadito</span><span class="dots"></span><span class="pr">$1.25</span></div>
+    <div class="mi"><span class="nm">Colada</span><span class="dots"></span><span class="pr">$1.60</span></div>
+    <div class="mi"><span class="nm" data-es="Chocolate Caliente" data-en="Hot Chocolate">Chocolate Caliente</span><span class="ds" data-es="(desde)" data-en="(from)">(desde)</span><span class="dots"></span><span class="pr">$1.70</span></div>
+    <div class="mi"><span class="nm" data-es="Jugos de Lata (mango, guayaba)" data-en="Can Juices (mango, guava)">Jugos de Lata (mango, guayaba)</span><span class="dots"></span><span class="pr">$1.50</span></div>
+    <div class="mi"><span class="nm">Malta</span><span class="dots"></span><span class="pr">$1.75</span></div>
+    <div class="mi"><span class="nm" data-es="Sodas de Lata" data-en="Can Sodas">Sodas de Lata</span><span class="dots"></span><span class="pr">$1.00</span></div>
+    <div class="mi"><span class="nm" data-es="Refill de Refresco de Fuente" data-en="Fountain Drink Refill">Refill de Refresco de Fuente</span><span class="dots"></span><span class="pr" data-es="¡GRATIS!" data-en="FREE!">¡GRATIS!</span></div>
+
+    <p class="nota" data-es="Precios tomados del menú impreso del local y de su menú público en DoorDash (octubre 2026). Pueden variar sin previo aviso; confírmalos al ordenar. El refill gratis aplica solo comiendo en el local." data-en="Prices from the cafe's printed in-store menu and its public DoorDash menu (October 2026). Subject to change; please confirm when ordering. Free refills are dine-in only.">Precios tomados del menú impreso del local y de su menú público en DoorDash (octubre 2026). Pueden variar sin previo aviso; confírmalos al ordenar. El refill gratis aplica solo comiendo en el local.</p>
+  </div>
+</section>
+
+<div class="catering">
+  <div class="script" data-es="¿tienes un evento?" data-en="having an event?">¿tienes un evento?</div>
+  <h2 data-es="HACEMOS <span style='color:var(--dorado2)'>CATERING</span>" data-en="WE DO <span style='color:var(--dorado2)'>CATERING</span>">HACEMOS <span style="color:var(--dorado2)">CATERING</span></h2>
+  <p data-es="El sabor de Conga's en tu fiesta, oficina o reunión familiar. Llámanos y armamos el menú contigo." data-en="Conga's flavor at your party, office or family gathering. Call us and we'll build the menu with you.">El sabor de Conga's en tu fiesta, oficina o reunión familiar. Llámanos y armamos el menú contigo.</p>
+  <a class="btn" href="tel:+18139627775">📞 (813) 962-7775</a>
+</div>
+
+<section>
+  <div class="kicker" data-es="así se ve Conga's" data-en="this is Conga's">así se ve Conga's</div>
+  <h2 data-es="GALERÍA <span class='rj'>DEL LOCAL</span>" data-en="PHOTO <span class='rj'>GALLERY</span>">GALERÍA <span class="rj">DEL LOCAL</span></h2>
+  <div class="gal">
+    <img class="wide" src="imgs/interior.jpg" alt="Interior de Conga's Latin Cafe con sus congas decorativas">
+    <img src="imgs/interior2.jpg" alt="Interior del café">
+    <img src="imgs/menu-original.jpg" alt="Menú impreso original del local">
+  </div>
+</section>
+
+<section>
+  <div class="kicker" data-es="tu opinión nos mueve" data-en="your opinion keeps us going">tu opinión nos mueve</div>
+  <h2 data-es="ENCUÉNTRANOS Y <span class='rj'>CALIFÍCANOS</span>" data-en="FIND US &amp; <span class='rj'>RATE US</span>">ENCUÉNTRANOS Y <span class="rj">CALIFÍCANOS</span></h2>
+  <div class="qrs">
+    <div class="qrcard">
+      <img src="qr/qr-ubicacion.png" alt="QR de ubicación de Conga's Latin Cafe en Google Maps">
+      <h3 data-es="Cómo llegar" data-en="Directions">Cómo llegar</h3>
+      <p data-es="Escanea y abre nuestra ubicación oficial en Google Maps." data-en="Scan to open our official Google Maps location.">Escanea y abre nuestra ubicación oficial en Google Maps.</p>
+    </div>
+    <div class="qrcard">
+      <img src="qr/qr-resena.png" alt="QR para dejar una reseña en Google">
+      <div class="stars">★★★★★</div>
+      <h3 data-es="Déjanos tu reseña" data-en="Leave us a review">Déjanos tu reseña</h3>
+      <p data-es="¿Te gustó el cafecito? Cuéntalo en Google: nos ayuda muchísimo." data-en="Loved the coffee? Tell Google: it helps us a lot.">¿Te gustó el cafecito? Cuéntalo en Google: nos ayuda muchísimo.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker" data-es="pásate por aquí" data-en="stop by">pásate por aquí</div>
+  <h2 data-es="HORARIO Y <span class='rj'>CONTACTO</span>" data-en="HOURS &amp; <span class='rj'>CONTACT</span>">HORARIO Y <span class="rj">CONTACTO</span></h2>
+  <div class="info">
+    <div class="dir">4511 Gunn Hwy, Tampa, FL 33624
+      <small data-es="Mesas adentro y al aire libre · Para comer aquí o para llevar" data-en="Indoor &amp; outdoor seating · Dine-in or takeout">Mesas adentro y al aire libre · Para comer aquí o para llevar</small>
+    </div>
+    <table>
+      <tr><td data-es="Lunes a Viernes" data-en="Monday – Friday">Lunes a Viernes</td><td>8:00 AM – 5:00 PM</td></tr>
+      <tr><td data-es="Sábado" data-en="Saturday">Sábado</td><td>8:00 AM – 3:00 PM</td></tr>
+      <tr><td data-es="Domingo" data-en="Sunday">Domingo</td><td data-es="Cerrado" data-en="Closed">Cerrado</td></tr>
+    </table>
+    <div class="ctas" style="margin-top:14px">
+      <a class="btn rojo" href="tel:+18139627775">📞 (813) 962-7775</a>
+      <a class="btn borde" style="background:var(--verde);border-color:var(--verde)" href="https://www.facebook.com/congascafe" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f1">CONGA'S LATIN CAFE</div>
+  <p data-es="Café cubano y cocina latina en Tampa desde 2010 · 4511 Gunn Hwy" data-en="Cuban coffee &amp; Latin kitchen in Tampa since 2010 · 4511 Gunn Hwy">Café cubano y cocina latina en Tampa desde 2010 · 4511 Gunn Hwy</p>
+  <p><a href="tel:+18139627775">(813) 962-7775</a></p>
+</footer>
+
+</div>
+
+<a class="wa-float" href="https://wa.me/18139627775" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.7l.5-.6c.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3z"/></svg>
+</a>
+
+<script>
+function setLang(l){
+  document.querySelectorAll('[data-es]').forEach(function(el){
+    var v = el.getAttribute('data-' + l);
+    if(v !== null){ el.innerHTML = v; }
+  });
+  document.documentElement.lang = l;
+  document.getElementById('bES').classList.toggle('on', l === 'es');
+  document.getElementById('bEN').classList.toggle('on', l === 'en');
+  try{ localStorage.setItem('congas-lang', l); }catch(e){}
+}
+(function(){
+  var l = 'es';
+  try{ l = localStorage.getItem('congas-lang') || 'es'; }catch(e){}
+  if(l === 'en'){ setLang('en'); }
+})();
+</script>
+</body>
+</html>
